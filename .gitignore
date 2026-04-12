@@ -1,0 +1,6 @@
+checkpoints
+docs
+wandb
+data
+main.py
+test.py
