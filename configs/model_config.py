@@ -37,7 +37,7 @@ class ModelConfig:
     seq_len: int = 64          # matches --seq_len 64 used during extraction
     num_joints: int = 75
     coords_per_joint: int = 3
-    num_classes: int = 2000
+    num_classes: int = 1000
     lstm_layers: int = 2
     bidirectional: bool = True
 
