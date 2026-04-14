@@ -28,7 +28,7 @@ class ModelConfig:
         lstm_layers: Number of stacked LSTM layers (used by TemporalEncoderLSTM).
         bidirectional: Whether the LSTM runs in both temporal directions.
     """
-    hidden_dim: int = 256
+    hidden_dim: int = 512
     num_heads: int = 8
     num_transformer_layers: int = 4
     ff_dim: int = 512
@@ -67,9 +67,9 @@ class TrainingConfig:
         wandb_entity: W&B entity/team name (None = personal account).
         use_amp: Whether to use automatic mixed precision (FP16) training.
     """
-    batch_size: int = 128
+    batch_size: int = 256
     num_epochs: int = 200 #80
-    learning_rate: float = 3e-4
+    learning_rate: float = 1e-4
     weight_decay: float = 1e-5
     warmup_epochs: int = 10
     grad_clip_norm: float = 1.0

@@ -189,7 +189,7 @@ class Trainer:
 
             self.optimizer.zero_grad(set_to_none=True)
 
-            with autocast(enabled=self.train_cfg.use_amp):
+            with autocast("cuda", enabled=self.train_cfg.use_amp):
                 logits = self.model(sequences)
                 loss = self.criterion(logits, labels)
 
@@ -247,7 +247,7 @@ class Trainer:
             sequences = sequences.to(self.device, non_blocking=True)
             labels = labels.to(self.device, non_blocking=True)
 
-            with autocast(enabled=self.train_cfg.use_amp):
+            with autocast("cuda", enabled=self.train_cfg.use_amp):
                 logits = self.model(sequences)
                 loss = self.criterion(logits, labels)
 
