@@ -37,7 +37,7 @@ class ModelConfig:
     seq_len: int = 64          # matches --seq_len 64 used during extraction
     num_joints: int = 75
     coords_per_joint: int = 3
-    num_classes: int = 1000
+    num_classes: int = 100
     lstm_layers: int = 4
     bidirectional: bool = True
 
@@ -78,6 +78,6 @@ class TrainingConfig:
     pin_memory: bool = True
     seed: int = 42
     checkpoint_dir: str = "checkpoints"
-    wandb_project: str = "slr-phase1-wlasl2000"
+    wandb_project: str = "slr-phase1-wlasl100"
     wandb_entity: Optional[str] = None
     use_amp: bool = True

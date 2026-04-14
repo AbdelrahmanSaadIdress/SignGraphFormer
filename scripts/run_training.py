@@ -199,7 +199,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--splits_json",
         type=str,
-        default="data/splits/wlasl_splits_processed_fake.json",
+        default="data/splits/wlasl_splits_processed_.json",
         help="Path to the processed splits JSON (keypoint_path included).",
     )
     parser.add_argument(
