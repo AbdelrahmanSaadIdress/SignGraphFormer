@@ -34,10 +34,10 @@ class ModelConfig:
     ff_dim: int = 512
     dropout: float = 0.1
     head_dropout: float = 0.3
-    seq_len: int = 16          # matches --seq_len 16 used during extraction
+    seq_len: int = 64          # matches --seq_len 64 used during extraction
     num_joints: int = 75
     coords_per_joint: int = 3
-    num_classes: int = 100
+    num_classes: int = 2000
     lstm_layers: int = 2
     bidirectional: bool = True
 
@@ -78,6 +78,6 @@ class TrainingConfig:
     pin_memory: bool = True
     seed: int = 42
     checkpoint_dir: str = "checkpoints"
-    wandb_project: str = "slr-phase1-wlasl100"
+    wandb_project: str = "slr-phase1-wlasl2000"
     wandb_entity: Optional[str] = None
     use_amp: bool = True
