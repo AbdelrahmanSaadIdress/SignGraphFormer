@@ -38,7 +38,7 @@ class ModelConfig:
     num_joints: int = 75
     coords_per_joint: int = 3
     num_classes: int = 1000
-    lstm_layers: int = 2
+    lstm_layers: int = 4
     bidirectional: bool = True
 
     @property
@@ -67,11 +67,11 @@ class TrainingConfig:
         wandb_entity: W&B entity/team name (None = personal account).
         use_amp: Whether to use automatic mixed precision (FP16) training.
     """
-    batch_size: int = 32
-    num_epochs: int = 100 #80
+    batch_size: int = 128
+    num_epochs: int = 200 #80
     learning_rate: float = 3e-4
     weight_decay: float = 1e-5
-    warmup_epochs: int = 5
+    warmup_epochs: int = 10
     grad_clip_norm: float = 1.0
     label_smoothing: float = 0.05
     num_workers: int = 2
