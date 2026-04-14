@@ -28,7 +28,7 @@ class ModelConfig:
         lstm_layers: Number of stacked LSTM layers (used by TemporalEncoderLSTM).
         bidirectional: Whether the LSTM runs in both temporal directions.
     """
-    hidden_dim: int = 512
+    hidden_dim: int = 256
     num_heads: int = 8
     num_transformer_layers: int = 4
     ff_dim: int = 512
